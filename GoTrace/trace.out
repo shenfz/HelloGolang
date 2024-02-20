@@ -1,0 +1,1 @@
+main.go:2:1: expected 'package', found 'import'
