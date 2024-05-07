@@ -6,7 +6,7 @@ import "testing"
  * @Author: shenfz
  * @Author: 1328919715@qq.com
  * @Date: 2021/9/15 13:57
- * @Desc: 致使结构不可被比较
+ * @Desc: 使结构不可被比较
  */
 
 // 放置一个非导出的零尺寸的不可比较类型的字段

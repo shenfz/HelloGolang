@@ -10,7 +10,7 @@ import (
  * @Author: shenfz
  * @Author: 1328919715@qq.com
  * @Date: 2021/9/15 13:54
- * @Desc: 一些不希望被复制的值
+ * @Desc: 一些不希望被复制的结构
  */
 
 /*
@@ -19,8 +19,8 @@ import (
 
 */
 
-//strings.Builder的实现会在运行时刻探测到非法的strings.Builder值复制。
-//一旦这样的复制被发现，就会产生恐慌
+// strings.Builder的实现会在运行时刻探测到非法的strings.Builder值复制。
+// 一旦这样的复制被发现，就会产生恐慌
 func Test_CopyStringsBuilder(t *testing.T) {
 	var b strings.Builder
 	b.WriteString("hello ")

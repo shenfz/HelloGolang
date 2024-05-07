@@ -11,7 +11,7 @@ import (
  * @Author shenfz
  * @Date 2021/10/11 16:41
  * @Email 1328919715@qq.com
- * @Description: 获取信号量 ， kill -l
+ * @Description:
  **/
 
 func main() {

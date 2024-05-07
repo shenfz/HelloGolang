@@ -50,7 +50,7 @@ func main() {
 		log.Printf("get a signal %s", s.String())
 		switch s {
 		case syscall.SIGQUIT, syscall.SIGTERM, syscall.SIGINT:
-			log.Println("GBDeviceControl exit by signal")
+			log.Println(" exit by signal")
 			time.Sleep(time.Second)
 			return
 		case syscall.SIGHUP:
