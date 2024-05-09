@@ -1,7 +1,7 @@
 package main
 
 import (
-	StudyInterface2 "github.com/shenfz/HelloGolang/GoPrimitive/GoInterface/localPackageInterface/StudyInterface"
+	StudyInterface2 "github.com/shenfz/HelloGolang/Go101/GoInterface/localPackageInterface/StudyInterface"
 )
 
 /**

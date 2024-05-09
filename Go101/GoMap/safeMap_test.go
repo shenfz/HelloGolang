@@ -1,7 +1,7 @@
 package GoMap
 
 import (
-	MySafeMap2 "github.com/shenfz/HelloGolang/GoPrimitive/GoMap/MySafeMap"
+	MySafeMap2 "github.com/shenfz/HelloGolang/Go101/GoMap/MySafeMap"
 	"testing"
 )
 

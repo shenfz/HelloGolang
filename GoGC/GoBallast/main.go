@@ -8,13 +8,15 @@ import (
  * @Author shenfz
  * @Date 2021/12/1 16:21
  * @Email 1328919715@qq.com
- * @Description:
+ * @Description: https://zhuanlan.zhihu.com/p/434362097
  **/
 /*
- Go ballast，其实很简单就是初始化一个生命周期贯穿整个 Go 应用生命周期的超大 slice
+ 一种精确控制gc的方式
+ Go ballast，其实很简单就是 初始化一个生命周期贯穿整个 Go 应用生命周期的超大 slice
 
 ps -eo pmem,comm,pid,maj_flt,min_flt,rss,vsz --sort -rss | numfmt --header --to=iec --field 5 | numfmt --header --from-unit=1024 --to=iec --field 6 | column -t | egrep "[t]est|[P]I"
 
+虚拟内存10G，实际占用内存344M
 RSS = 344M
 VSZ = 10*1024*1024  M
 */

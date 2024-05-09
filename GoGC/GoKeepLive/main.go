@@ -9,7 +9,7 @@ import (
  * @Author shenfz
  * @Date 2021/12/1 16:48
  * @Email 1328919715@qq.com
- * @Description:
+ * @Description:  保留不需要gc标记的对象
  **/
 
 type File struct{ d syscall.Handle }

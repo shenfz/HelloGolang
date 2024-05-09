@@ -1,4 +1,4 @@
-package Slice
+package SliceQ
 
 import (
 	"fmt"
@@ -9,7 +9,7 @@ import (
  * @Author: shenfz
  * @Author: 1328919715@qq.com
  * @Date: 2021/4/14 10:47
- * @Desc:
+ * @Desc:  切片实现
  */
 
 type ArrayP struct {
