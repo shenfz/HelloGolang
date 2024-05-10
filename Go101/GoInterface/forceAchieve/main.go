@@ -4,7 +4,7 @@ package main
  * @Author shenfz
  * @Date 2021/12/9 17:10
  * @Email 1328919715@qq.com
- * @Description:
+ * @Description: 强制结构 实现某接口
  **/
 
 /*

@@ -11,7 +11,7 @@ import (
  * @Desc:
  */
 /*
-  1. slice在循环开始之前，仅计算一次，在循环过程中修改切片长度则不影响本次循环次数 ,但是内容修改则会影响输出
+  1. slice在循环开始之前，仅计算一次，在循环过程中 修改切片长度 则 不影响本次循环次数 ,但是 内容修改 则会 影响输出
   2. map迭代 ，未迭代到的键值对被删除，则无迭代输出；新增键值对，可能会被迭代。针对nil 切片 ，迭代次数为0
   3. 遍历较简单的数据结构，for-i 和 for-range 性能差不多
   4. 当遍历结构里面有占用较大内存的结构，则尽量规避迭代导致的值复制，使用索引，性能更好
@@ -60,7 +60,7 @@ func BenchmarkForStruct(b *testing.B) {
 	}
 }
 
-//  5088058	       237.6 ns/op
+// 5088058	       237.6 ns/op
 func BenchmarkRangeIndexStruct(b *testing.B) {
 	var items [1024]Item
 	for i := 0; i < b.N; i++ {
@@ -72,7 +72,7 @@ func BenchmarkRangeIndexStruct(b *testing.B) {
 	}
 }
 
-//   12212	    108981 ns/op
+// 12212	    108981 ns/op
 func BenchmarkRangeStruct(b *testing.B) {
 	var items [1024]Item
 	for i := 0; i < b.N; i++ {

@@ -1,4 +1,4 @@
-package GoGorountine
+package GoRuntime
 
 import (
 	"fmt"
@@ -23,7 +23,16 @@ func Test_GoSched(t *testing.T) {
 		for i := 0; i < 2; i++ {
 			fmt.Println(s)
 		}
-	}("world")
+		ch := make(chan struct{})
+		<-ch
+	}("gor1")
+	go func(s string) {
+		for i := 0; i < 2; i++ {
+			fmt.Println(s)
+		}
+		ch := make(chan struct{})
+		<-ch
+	}("gor2")
 
 	for i := 0; i < 2; i++ {
 		//时间出让

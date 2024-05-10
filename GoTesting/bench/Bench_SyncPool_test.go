@@ -15,19 +15,25 @@ import (
  */
 
 /*
-   Sync.Pool :
-    1. 可伸缩的，同时也是并发安全的，其大小仅受限于内存的大小
-    2. 用于存储那些被分配了但是没有被使用，而未来可能会使用的值
-    3. 存放在池中的对象如果不活跃了会被自动清理 （两次GC周期）
+Sync.Pool :
+
+ 1. 可伸缩的，同时也是并发安全的，其大小仅受限于内存的大小
+
+ 2. 用于存储那些被分配了但是没有被使用，而未来可能会使用的值
+
+ 3. 存放在池中的对象如果不活跃了会被自动清理 （两次GC周期）
 
     直接使用初始对象指针和使用sync.pool对比 ：
-     1. Student 结构体内存占用较小，内存分配几乎不耗时间
-     2. 两者耗时相近 ， 主要是json序列化反射耗时占用大头
-     3. 内存占用sync.pool 小了一个数量级
+
+ 1. Student 结构体内存占用较小，内存分配几乎不耗时间
+
+ 2. 两者耗时相近 ， 主要是json序列化反射耗时占用大头
+
+ 3. 内存占用 sync.pool 小了一个数量级
 
     bytes.Buffer 使用 sync.Pool 对比：
-     1. 使用 sync.Pool 无论在耗时和内存占用上面都 表现更佳 ,复用对象 0 B/op
 
+ 1. 使用 sync.Pool 无论在耗时和内存占用上面都 表现更佳 ,复用对象 0 B/op
 */
 type Student struct {
 	Name   string
@@ -56,7 +62,7 @@ func BenchmarkUnmarshal(b *testing.B) {
 	}
 }
 
-//17061	       69936 ns/op	      232 B/op	       6 allocs/op
+// 17061	       69936 ns/op	      232 B/op	       6 allocs/op
 func BenchmarkUnmarshalWithPool(b *testing.B) {
 	for n := 0; n < b.N; n++ {
 		stu := poolLocal.Get().(*Student)

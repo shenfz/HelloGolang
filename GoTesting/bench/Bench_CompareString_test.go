@@ -15,13 +15,14 @@ import (
  比较大小写敏感字符串：  耗时差不多
   1. a = b
   2. strings.Compare(a,b)
+
  比较大小写忽略字符串： 使用Equalfold较快，比较可以半路下车
   1. strings.Tolower(a) == strings.Tolower(b)
   2. strings.Equalfold(a,b)
 
 */
 
-//  	614534666	         1.957 ns/op
+// 614534666	         1.957 ns/op
 func Benchmark_Direct_Compare(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		CompareDirect("aa", "aa")
@@ -32,7 +33,7 @@ func CompareDirect(a, b string) bool {
 	return a == b
 }
 
-//	650660419	         1.847 ns/op
+// 650660419	         1.847 ns/op
 func Benchmark_StringsPKG_Compare(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		CompareByStringsPKG("aa", "aa")

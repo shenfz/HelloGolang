@@ -1,4 +1,4 @@
-package Range
+package GoRange
 
 import (
 	"fmt"
@@ -11,6 +11,12 @@ import (
  * @Date: 2021/9/15 14:28
  * @Desc: https://gfw.go101.org/article/container.html#delete-slice-elements
  */
+
+/*
+  bench 参考
+  GoTesting/bench/Bench_ForRange_test.go
+
+*/
 
 /*
    1. range-array: 巨量数组 ，复制其指针或使用其切片遍历，开销较小

@@ -36,6 +36,9 @@ func Test_GetItem(t *testing.T) {
 	s := new(service)
 	s.typ = reflect.TypeOf(rcvr)
 	s.rcvr = reflect.ValueOf(rcvr)
-	sname := reflect.Indirect(s.rcvr).Type().Name()
-	t.Log(sname) // Item
+	// sname := reflect.Indirect(s.rcvr).Type().Name() // Item
+	t.Logf("%+v", s)
+	/*
+	  &{name: rcvr:{typ_:0x955440 ptr:0xc00008a250 flag:22} typ:0x955440 method:map[]}
+	*/
 }
