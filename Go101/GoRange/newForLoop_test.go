@@ -59,12 +59,12 @@ func Test_LoopVar(t *testing.T) {
 
 // 整形表达式
 func Test_IntExpression(t *testing.T) {
-	n := 5
+	//n := 5
 	// 如果n <= 0，则循环不运行任何迭代
 	// 理解为是一种“语法糖”
-	for i := range n {
-		fmt.Println(i)
-	}
+	//for i := range n {
+	//	fmt.Println(i)
+	//}
 	//for i := 0; i < 5; i++ {
 	//
 	//}

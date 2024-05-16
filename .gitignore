@@ -1,0 +1,4 @@
+*.exe
+*_linux
+*.log
+.idea
