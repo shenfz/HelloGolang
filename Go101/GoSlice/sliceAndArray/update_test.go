@@ -1,7 +1,6 @@
-package SliceQ
+package sliceAndArray
 
 import (
-	"sort"
 	"testing"
 )
 
@@ -9,25 +8,14 @@ import (
  * @Author shenfz
  * @Date 2021/7/19 16:02
  * @Email 1328919715@qq.com
- * @Description:
+ * @Description:  传递数组并改变其集合中的某些值 ： 数组传指针或者传自身的”最长切片“（array[:]）、切片传自身
  **/
 
-// 切片排序
-func Test_SortInsert(t *testing.T) {
-	IsExisted([]string{"xc", "cx"}, "xc")
-}
-
-func IsExisted(ex []string, in string) (index int, b bool) {
-	index = sort.SearchStrings(ex, in)
-	b = len(ex) != index && ex[index] == in
-	return
-}
-
-// 切片 数组
+// 切片 数组 都是值拷贝传递
 func Test_AS(t *testing.T) {
 	var (
-		arrays = [6]int{1, 2, 3, 4, 5, 6} // 数组是内置类型，是一组同类型数据的集合，它是值类型，通过从0开始的下标索引访问元素值。在初始化后长度是固定的，无法修改其长度
-		silces = []int{1, 2, 3, 4, 5}     // 切片是地址传递；切片可以通过数组来初始化
+		arrays = [...]int{1, 2, 3, 4, 5, 6}
+		silces = []int{1, 2, 3, 4, 5}
 		s2     = arrays[:]
 	)
 

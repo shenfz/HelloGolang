@@ -1,4 +1,4 @@
-package T_test
+package Escape_test
 
 import (
 	"log"
@@ -68,7 +68,7 @@ func testNoUse() {
 	*testC = 1
 }
 
-//逃逸分析命令： go build -gcflags="-m" main.go
+// 逃逸分析命令： go build -gcflags="-m" main.go
 // 外部未使用,未从栈逃逸到堆
 func main1() {
 	testNoUse()
@@ -134,7 +134,8 @@ func testSilce() {
 */
 
 /*
- 假设这里创建的切片存储了大量的指针，那么对于当中的每一个指针都需要做变量在外部是否被引用的验证，
+	假设这里创建的切片存储了大量的指针，那么对于当中的每一个指针都需要做变量在外部是否被引用的验证，
+
 这样大量的切片取指针，验证操作都会带来性能的损耗，
 所以当切片中存储的是指针时，索性将切片中 指针指向的 栈上的变量 全部放到堆上
 */

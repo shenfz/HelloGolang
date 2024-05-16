@@ -1,4 +1,4 @@
-package SliceQ
+package sliceCopy
 
 import (
 	"reflect"

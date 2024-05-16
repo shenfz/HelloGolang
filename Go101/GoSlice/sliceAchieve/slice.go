@@ -1,4 +1,4 @@
-package SliceQ
+package sliceAchieve
 
 import (
 	"fmt"
