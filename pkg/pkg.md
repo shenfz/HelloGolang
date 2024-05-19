@@ -1,2 +1,5 @@
 # pkg
-> 各种工具的简易实现 包括doOnce，互斥锁，buffer池
+>  简单的工具包和工具函数
+
+## withDefault
+> 仿制 `cmp.Or`的功能

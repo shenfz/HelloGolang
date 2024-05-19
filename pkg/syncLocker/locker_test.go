@@ -41,6 +41,7 @@ func (c *Config) Len() (int, int, int) {
 
 func Test_NewLocker(t *testing.T) {
 	conf := Config{
+		//
 		locker: NewSpinLock(),
 		data:   make(map[string]string),
 	}

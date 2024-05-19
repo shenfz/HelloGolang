@@ -1,8 +1,8 @@
-package byteBufferPool
+package quickBuffer
 
 import (
 	"fmt"
-	"github.com/valyala/bytebufferpool"
+	"github.com/shenfz/HelloGolang/pkg/quickBuffer"
 	"testing"
 )
 
@@ -29,20 +29,20 @@ import (
 */
 
 func Test_SimpleUse(t *testing.T) {
-	b := bytebufferpool.Get()
+	b := quickBuffer.Get()
 	b.WriteString("hello")
 	b.WriteByte(',')
 	b.WriteString(" world!")
 	fmt.Println(b.String())
-	bytebufferpool.Put(b)
+	quickBuffer.Put(b)
 }
 
 // Benchmark_Buffer-16    	66874347	        17.67 ns/op
 func Benchmark_Buffer(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		b := bytebufferpool.Get()
+		b := quickBuffer.Get()
 		b.WriteString("hello")
 		b.WriteByte(',')
-		bytebufferpool.Put(b)
+		quickBuffer.Put(b)
 	}
 }

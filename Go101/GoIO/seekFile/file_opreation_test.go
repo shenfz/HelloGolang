@@ -1,4 +1,4 @@
-package GoIO
+package seekFile
 
 import (
 	"bufio"
@@ -19,9 +19,9 @@ import (
 */
 
 /*
-  Seek设置下一次读/写的位置。offset为相对偏移量，
-  whence决定相对位置：0为相对文件开头，1为相对当前位置，2为相对文件结尾
-  返回新的偏移量（相对开头）和可能的错误
+Seek设置下一次读/写的位置。offset为相对偏移量，
+whence决定相对位置：0为相对文件开头，1为相对当前位置，2为相对文件结尾
+返回新的偏移量（相对开头）和可能的错误
 */
 var (
 	filePath       = "./test.log"

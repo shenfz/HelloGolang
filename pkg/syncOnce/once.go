@@ -1,4 +1,4 @@
-package SyncOnce
+package syncOnce
 
 import (
 	"sync"
